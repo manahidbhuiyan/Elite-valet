@@ -1,0 +1,98 @@
+.background1 {
+  background-color: #F8F4F1;
+}
+
+.primary-text {
+  color: #D63000;
+}
+
+.navbar-primary-btn {
+  color: #ffffff;
+  background-color: #D63000;
+  border: none;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+
+
+.login-form-container {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.login-title{
+  font-size: 24px;
+}
+
+.form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin: 0;
+  border-top: 10px solid #D63000;
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: none;
+}
+
+.form-control,
+.form-select {
+  border: none;
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.input-container input {
+  padding-left: 42px; 
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.input-container img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; 
+}
+
+.google-btn {
+  font-size: 16px;
+  background-color: #ffffff;
+  border: none;
+  padding: 10px 100px;
+}
+
+.form-primary-btn {
+  background-color: #D63000;
+  border: none;
+  padding: 8px 40px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+/* --------------------------------
+            responsive 
+---------------------------------*/
+@media only screen and (max-width: 576px) {
+  .login-form-container {
+    margin-top: 50px;
+  }
+
+  .navbar {
+    padding: 10px;
+  }
+  .google-btn {
+    padding: 10px 30px;
+  }
+}

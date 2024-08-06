@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- css link  -->
+    <link rel="stylesheet" href="./styles/signup.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+
+    <!-- font awesome  -->
+    <script
+      src="https://kit.fontawesome.com/722bf37857.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Sign up</title>
+  </head>
+  <body>
+   <!-- Navbar -->
+   <header>
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/images/home/logo.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><img src="./assets/images/humberger.png" alt=""
+          /></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto large-navbar">
+            <li class="nav-item me-4">
+              <a class="nav-link fw-bold" href="reservation.html">Réserver</a>
+            </li>
+            <a class="d-flex" href="login.html" style="text-decoration: none">
+              <button
+                class="navbar-primary-btn btn-block text-white rounded-pill"
+              >
+                Se Connecter
+              </button>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- mobile sidebar -->
+    <div class="nav-overlay">
+      <!-- mobile sidebar -->
+      <div class="mobile-sidebar">
+        <div class="mobile-head">
+          <div class="mobile-logo">
+            <img src="./assets/images/home/logo.png" alt="" />
+          </div>
+          <p class="cross"><img src="./assets/images/cross.png" alt="" /></p>
+        </div>
+        <ul class="navbar-nav ms-auto py-3">
+          <li class="nav-item me-4">
+            <a class="nav-link" href="reservation.html">Réserver</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle dropdown-toggle1"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Airports
+              <img
+                class="dropdown-icon dropdownIcon"
+                src="./assets/images/home/Icon.png"
+                alt="Dropdown Icon"
+              />
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Airports 1</a></li>
+              <li><a class="dropdown-item" href="#">Airports 2</a></li>
+              <li><a class="dropdown-item" href="#">Airports 3</a></li>
+            </ul>
+          </li>
+          <a
+            class="sidebar-button"
+            href="login.html"
+            style="text-decoration: none"
+          >
+            <button
+              class="navbar-primary-btn btn-block text-white rounded-pill"
+            >
+              Se Connecter
+            </button>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+    <main class="container-fluid">
+      <div class="p-3 signup-form-container">
+        <div class="form-container">
+          <form class="background1 p-3 rounded-4">
+            <h3 class="fw-bold text-center signup-title" style="padding: 10px 0">
+              Créer un compte
+            </h3>
+            <div class="d-flex justify-content-center mt-3 mb-4">
+              <button
+                type="submit"
+                class="google-btn text-black rounded-pill d-flex align-items-center gap-2"
+              >
+                <img src="./assets/images/login/google.png" alt="" />
+                Sign up with Google
+              </button>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <label for="dateAller" style="font-size: 16px;">Créer un compte <span class="primary-text ">*</span></label>
+                <div class="input-container d-flex align-items-center">
+                  <input
+                    type="email"
+                    class="form-control rounded-pill mt-2"
+                    placeholder="Entrer l’adresse e-mail"
+                  />
+                  <img src="./assets/images/icon/email.png" alt="" class="mt-1 ps-2">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <label for="dateAller" style="font-size: 16px;">Confirmer mon addresse e-mail <span class="primary-text ">*</span></label>
+                <div class="input-container d-flex align-items-center">
+                  <input
+                    type="email"
+                    class="form-control rounded-pill mt-2"
+                    placeholder="Confirmer mon addresse e-mail"
+                  />
+                  <img src="./assets/images/icon/email.png" alt="" class="mt-1 ps-2">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <label for="dateAller" style="font-size: 16px;">Mot de passe <span class="primary-text ">*</span></label>
+                <div class="input-container d-flex align-items-center">
+                  <input
+                    type="password"
+                    class="form-control rounded-pill mt-2"
+                    placeholder="Entrer le mot de passe"
+                  />
+                  <img src="./assets/images/icon/lock.png" alt="" class="mt-1 ps-2">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <label for="dateAller" style="font-size: 16px;">Confirmation mon mot de passe <span class="primary-text ">*</span></label>
+                <div class="input-container d-flex align-items-center">
+                  <input
+                    type="password"
+                    class="form-control rounded-pill mt-2"
+                    placeholder="Confirmation mon mot de passe"
+                  />
+                  <img src="./assets/images/icon/lock.png" alt="" class="mt-1 ps-2">
+                </div>
+              </div>
+            </div>
+            <div>
+              <input type="checkbox" id="accept" name="accept" value="accept" />
+              <label for="accept">
+                J’ai lu et j’accepte les conditions
+                <span class="primary-text" style="text-decoration: underline"
+                  >générales de vente</span
+                > </label
+              ><br />
+            </div>
+          </form>
+
+          <div class="d-flex justify-content-center mt-4">
+            <button
+              type="submit"
+              class="form-primary-btn btn-block text-white rounded-pill"
+            >
+              S’inscrire
+            </button>
+          </div>
+          <p class="text-center mt-4" style="font-size: 16px;">
+            Vous n'avez pas de compte ?
+            <a class="primary-text fw-medium" href="signup.html" style="text-decoration: none;">S’INSCRIRE</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <!-- add js file -->
+    <script src="./js/index.js"></script>
+    <script src="./js/sidebar.js"></script>
+
+    <!-- bootstrap cdn -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- bootstrap cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    rel="stylesheet">
+  <!-- css link -->
+  <link rel="stylesheet" href="./styles/reservation.css" />
+  <link rel="stylesheet" href="./styles/services.css" />
+  <link rel="stylesheet" href="./styles/options.css" />
+  <link rel="stylesheet" href="./styles/connexion.css" />
+  <link rel="stylesheet" href="./styles/navbar.css" />
+  <!-- fontawesome link -->
+  <script src="https://kit.fontawesome.com/722bf37857.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <!-- title -->
+  <title>Reservation</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="./assets/images/home/logo.png" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><img src="./assets/images/humberger.png" alt="" /></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item reserve">
+              <a class="nav-link fw-bold" href="reservation.html">Réserver</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Mon compte
+                <span><img src="./assets/images/home/Icon.png" alt="" /></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="profile-edit.html">Profil</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="reservations.html">Réservations</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="historique.html">Historique des réservations</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Deconnexion</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- mobile sidebar -->
+    <div class="nav-overlay">
+      <!-- mobile sidebar -->
+      <div class="mobile-sidebar">
+        <div class="mobile-head">
+          <div class="mobile-logo">
+            <img src="./assets/images/home/logo.png" alt="" />
+          </div>
+          <p class="cross"><img src="./assets/images/cross.png" alt="" /></p>
+        </div>
+        <ul class="navbar-nav ms-auto py-3">
+          <li class="nav-item me-4">
+            <a class="nav-link" href="reservation.html">Réserver</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle dropdown-toggle1" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Airports
+              <img class="dropdown-icon dropdownIcon" src="./assets/images/home/Icon.png" alt="Dropdown Icon" />
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Airports 1</a></li>
+              <li><a class="dropdown-item" href="#">Airports 2</a></li>
+              <li><a class="dropdown-item" href="#">Airports 3</a></li>
+            </ul>
+          </li>
+          <a class="sidebar-button" href="login.html" style="text-decoration: none">
+            <button class="navbar-primary-btn btn-block text-white rounded-pill">
+              Se Connecter
+            </button>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- mobile top -->
+    <section class="left-side-top mobile-top">
+      <div class="left-side-top-part">
+        <div class="left-side-top-small-btn active-btn Réservation-button-small">
+          <i class="fa-solid fa-file-export"></i>
+        </div>
+        <span class="btn-ranking Réservation-button-small-ranking active-ranking">01</span>
+      </div>
+      <div class="left-side-top-part">
+        <div class="left-side-top-small-btn service-button-small">
+          <i class="fa-solid fa-gear"></i>
+        </div>
+        <span class="btn-ranking service-button-small-ranking">02</span>
+      </div>
+      <div class="left-side-top-part">
+        <div class="left-side-top-small-btn option-button-small">
+          <i class="fa-solid fa-shield"></i>
+        </div>
+        <span class="btn-ranking option-button-small-ranking">03</span>
+      </div>
+      <div class="left-side-top-part">
+        <div class="left-side-top-small-btn connexion-button-small">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <span class="btn-ranking connexion-button-small-ranking">04</span>
+      </div>
+    </section>
+    <!-- mobile top cart -->
+    <section class="mobile-top-cart">
+      <div class="mobile-top-cart-inner">
+        <div class="card-top mb-2">
+          <div class="card-top-left">
+            <div class="icon">
+              <img src="./assets/images/icon/blu-plane.png" alt="" />
+            </div>
+            <div class="text">
+              <p>Bordeaux-Merignac</p>
+              <span>05/20/2024 à 08:00</span>
+            </div>
+          </div>
+          <div class="card-top-left">
+            <div class="icon" style="background-color: #f9f3ff">
+              <img src="./assets/images/icon/purple-plane.png" alt="" />
+            </div>
+            <div class="text">
+              <p>Bordeaux-Merignac</p>
+              <span>05/20/2024 à 08:00</span>
+            </div>
+          </div>
+          <div class="vertical-line-mobile"></div>
+          <hr class="bottom-hr" />
+          <div class="first-card-bottom">
+            <p>Parking+Voiturier</p>
+            <p style="color: #d63000" class="fw-medium">€58.10</p>
+          </div>
+        </div>
+      </div>
+      <div id="show-when-click" class="show-when-click">
+        <p class="card-inner-head" style="margin-top: 10px">Vos Options</p>
+        <div class="card">
+          <div class="first-card-bottom">
+            <p>Parking+Voiturier</p>
+            <div style="display: flex">
+              <p style="color: #d63000; margin-right: 5px">+19.00€</p>
+              <span class="delete-vos-options"><i class="fa-regular fa-trash-can"></i></span>
+            </div>
+          </div>
+          <hr class="bottom-hr" />
+          <div class="first-card-bottom">
+            <p>Lavage Intérieur</p>
+            <div style="display: flex">
+              <p style="color: #d63000; margin-right: 5px">+19.00€</p>
+              <span class="delete-vos-options"><i class="fa-regular fa-trash-can"></i></span>
+            </div>
+          </div>
+        </div>
+        <p class="card-inner-head" style="margin-top: 10px">Montant Total</p>
+        <div class="card">
+          <div class="first-card-bottom">
+            <p>Parking+Voiturier</p>
+            <p style="color: #1b2729">€58.10</p>
+          </div>
+          <div class="first-card-bottom">
+            <p>Parking+Voiturier</p>
+            <p style="color: #1b2729">€58.10</p>
+          </div>
+          <div class="first-card-bottom">
+            <p>Parking+Voiturier</p>
+            <p style="color: #1b2729">€58.10</p>
+          </div>
+          <hr class="bottom-hr" />
+          <div class="first-card-bottom">
+            <p style="color: #1b2729">Total</p>
+            <p style="color: #d63000; font-weight: 700">€58.10</p>
+          </div>
+        </div>
+      </div>
+      <span id="bottom-arrow " class="bottom-arrow"><i id="arrowIcon" class="fa-solid fa-chevron-down"></i></span>
+    </section>
+    <!-- main area -->
+    <section class="main">
+      <div class="container-fluid">
+        <!-- left sidebar -->
+        <aside class="left-side">
+          <div class="left-side-top large-top">
+            <div class="left-side-top-part">
+              <button class="left-side-top-btn active-btn Réservation-button">
+                <i class="fa-solid fa-file-export"></i>&nbsp;Réservation
+              </button>
+              <span class="btn-ranking Réservation-button-ranking active-ranking">01</span>
+            </div>
+            <div class="left-side-top-part">
+              <button class="left-side-top-btn service-button">
+                <i class="fa-solid fa-gear"></i>&nbsp;Services
+              </button>
+              <span class="btn-ranking service-button-ranking">02</span>
+            </div>
+            <div class="left-side-top-part">
+              <button class="left-side-top-btn option-button">
+                <i class="fa-solid fa-shield"></i>&nbsp;Options
+              </button>
+              <span class="btn-ranking option-button-ranking">03</span>
+            </div>
+            <div class="left-side-top-part">
+              <button class="left-side-top-btn connexion-button">
+                <i class="fa-solid fa-user"></i>&nbsp;Connexion
+              </button>
+              <span class="btn-ranking connexion-button-ranking">04</span>
+            </div>
+          </div>
+
+          <!-- reservation area start-->
+          <div class="reservation reservation-section display-block">
+            <div class="reservation-inner">
+              <div class="reservation-title">
+                <h3>1. Votre réservation</h3>
+              </div>
+              <div class="reservation-content">
+                <div class="reservation-inner-content" style="border-bottom: 2px dashed #dcdce0">
+                  <div class="ric-left-side">
+                    <button class="vertical-button">ALLER</button>
+                  </div>
+                  <div class="ric-right-side">
+                    <div class="row" style="row-gap: 20px">
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputName" class="form-label">Lieu de départ</label>
+                        <div class="select-class">
+                          <select class="form-select location-input" aria-label="Lieu de départ" style="
+                                padding: 10px 20px;
+                                color: rgba(27, 39, 41, 0.4);
+                                border-radius: 28px;
+                              ">
+                            <option selected>Sélectionner</option>
+                            <option value="1">Location 1</option>
+                            <option value="2">Location 2</option>
+                            <option value="3">Location 3</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputName" class="form-label">Point rdv</label>
+                        <div class="select-class">
+                          <select class="form-select location-input" aria-label="Lieu de départ" style="
+                                padding: 10px 20px;
+                                color: rgba(27, 39, 41, 0.4);
+                                border-radius: 28px;
+                              ">
+                            <option selected>Sélectionner</option>
+                            <option value="1">Location 1</option>
+                            <option value="2">Location 2</option>
+                            <option value="3">Location 3</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputAddress" class="form-label">Date de départ</label>
+                        <div class="input-group date-input-group">
+                          <input type="text" class="form-control date-input" id="datepicker" placeholder="Date">
+                          <span class="input-group-text"><img src="./assets/images/icon/calender.png" alt="" /></span>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputEmail" class="form-label">Nºde vol aller</label>
+                        <div class="input-group">
+                          <img src="./assets/images/icon/shoe-icon.png" style="width: 18px; height: 18px" alt="" />
+                          <input type="text" class="form-control" placeholder="Ex: AF 6277" />
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputEmail" class="form-label">Heure dêpôt</label>
+                        <div class="dropdown mt-2 custom-time-input"
+                          style=" background-color: #fff; border-radius: 28px;">
+                          <div class="time-picker-container">
+                            <img src="./assets/images/icon/clock.png" class="time-picker-icon" alt="Icon">
+                            <input type="text" class="form-control time-picker-input" placeholder="Heure"
+                              id="timePickerInput1" readonly>
+                            <img src="./assets/images/icon/dropdown.png" class="dropdown-icon1" alt="Dropdown Icon">
+                            <ul class="dropdown-menu custom-dropdown-menu" id="timeDropdown1">
+                              <li class="dropdown-item">Heure</li>
+                              <li class="dropdown-item">00:00</li>
+                              <li class="dropdown-item">00:15</li>
+                              <li class="dropdown-item">00:30</li>
+                              <li class="dropdown-item">00:45</li>
+                              <li class="dropdown-item">01:00</li>
+                              <li class="dropdown-item">01:15</li>
+                              <li class="dropdown-item">01:30</li>
+                              <li class="dropdown-item">01:45</li>
+                              <li class="dropdown-item">02:00</li>
+                              <li class="dropdown-item">02:15</li>
+                              <li class="dropdown-item">02:30</li>
+                              <li class="dropdown-item">02:45</li>
+                              <li class="dropdown-item">03:00</li>
+                              <li class="dropdown-item">03:15</li>
+                              <li class="dropdown-item">03:30</li>
+                              <li class="dropdown-item">03:45</li>
+                              <li class="dropdown-item">04:00</li>
+                              <li class="dropdown-item">04:15</li>
+                              <li class="dropdown-item">04:30</li>
+                              <li class="dropdown-item">04:45</li>
+                              <li class="dropdown-item">05:00</li>
+                              <li class="dropdown-item">05:15</li>
+                              <li class="dropdown-item">05:30</li>
+                              <li class="dropdown-item">05:45</li>
+                              <li class="dropdown-item">06:00</li>
+                              <li class="dropdown-item">06:15</li>
+                              <li class="dropdown-item">06:30</li>
+                              <li class="dropdown-item">06:45</li>
+                              <li class="dropdown-item">07:00</li>
+                              <li class="dropdown-item">07:15</li>
+                              <li class="dropdown-item">07:30</li>
+                              <li class="dropdown-item">07:45</li>
+                              <li class="dropdown-item">08:00</li>
+                              <li class="dropdown-item">08:15</li>
+                              <li class="dropdown-item">08:30</li>
+                              <li class="dropdown-item">08:45</li>
+                              <li class="dropdown-item">09:00</li>
+                              <li class="dropdown-item">09:15</li>
+                              <li class="dropdown-item">09:30</li>
+                              <li class="dropdown-item">09:45</li>
+                              <li class="dropdown-item">10:00</li>
+                              <li class="dropdown-item">10:15</li>
+                              <li class="dropdown-item">10:30</li>
+                              <li class="dropdown-item">10:45</li>
+                              <li class="dropdown-item">11:00</li>
+                              <li class="dropdown-item">11:15</li>
+                              <li class="dropdown-item">11:30</li>
+                              <li class="dropdown-item">11:45</li>
+                              <li class="dropdown-item">12:00</li>
+                              <li class="dropdown-item">12:15</li>
+                              <li class="dropdown-item">12:30</li>
+                              <li class="dropdown-item">12:45</li>
+                              <li class="dropdown-item">13:00</li>
+                              <li class="dropdown-item">13:15</li>
+                              <li class="dropdown-item">13:30</li>
+                              <li class="dropdown-item">13:45</li>
+                              <li class="dropdown-item">14:00</li>
+                              <li class="dropdown-item">14:15</li>
+                              <li class="dropdown-item">14:30</li>
+                              <li class="dropdown-item">14:45</li>
+                              <li class="dropdown-item">15:00</li>
+                              <li class="dropdown-item">15:15</li>
+                              <li class="dropdown-item">15:30</li>
+                              <li class="dropdown-item">15:45</li>
+                              <li class="dropdown-item">16:00</li>
+                              <li class="dropdown-item">16:15</li>
+                              <li class="dropdown-item">16:30</li>
+                              <li class="dropdown-item">16:45</li>
+                              <li class="dropdown-item">17:00</li>
+                              <li class="dropdown-item">17:15</li>
+                              <li class="dropdown-item">17:30</li>
+                              <li class="dropdown-item">17:45</li>
+                              <li class="dropdown-item">18:00</li>
+                              <li class="dropdown-item">18:15</li>
+                              <li class="dropdown-item">18:30</li>
+                              <li class="dropdown-item">18:45</li>
+                              <li class="dropdown-item">19:00</li>
+                              <li class="dropdown-item">19:15</li>
+                              <li class="dropdown-item">19:30</li>
+                              <li class="dropdown-item">19:45</li>
+                              <li class="dropdown-item">20:00</li>
+                              <li class="dropdown-item">20:15</li>
+                              <li class="dropdown-item">20:30</li>
+                              <li class="dropdown-item">20:45</li>
+                              <li class="dropdown-item">21:00</li>
+                              <li class="dropdown-item">21:15</li>
+                              <li class="dropdown-item">21:30</li>
+                              <li class="dropdown-item">21:45</li>
+                              <li class="dropdown-item">22:00</li>
+                              <li class="dropdown-item">22:15</li>
+                              <li class="dropdown-item">22:30</li>
+                              <li class="dropdown-item">22:45</li>
+                              <li class="dropdown-item">23:00</li>
+                              <li class="dropdown-item">23:15</li>
+                              <li class="dropdown-item">23:30</li>
+                              <li class="dropdown-item">23:45</li>
+                              <!-- Add more options as needed -->
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reservation-inner-content">
+                  <div class="ric-left-side">
+                    <button class="vertical-button">Retour</button>
+                  </div>
+                  <div class="ric-right-side">
+                    <div class="row" style="row-gap: 20px">
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputName" class="form-label">Lieu de départ</label>
+                        <div class="select-class">
+                          <select class="form-select location-input" aria-label="Lieu de départ" style="
+                                padding: 10px 20px;
+                                color: rgba(27, 39, 41, 0.4);
+                                border-radius: 28px;
+                              ">
+                            <option selected>Sélectionner</option>
+                            <option value="1">Location 1</option>
+                            <option value="2">Location 2</option>
+                            <option value="3">Location 3</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputName" class="form-label">Point rdv</label>
+                        <div class="select-class">
+                          <select class="form-select location-input" aria-label="Lieu de départ" style="
+                                padding: 10px 20px;
+                                color: rgba(27, 39, 41, 0.4);
+                                border-radius: 28px;
+                              ">
+                            <option selected>Sélectionner</option>
+                            <option value="1">Location 1</option>
+                            <option value="2">Location 2</option>
+                            <option value="3">Location 3</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputAddress" class="form-label">Date de départ</label>
+                        <div class="input-group date-input-group">
+                          <input type="text" class="form-control date-input" id="datepicker2" placeholder="Date">
+                          <span class="input-group-text"><img src="./assets/images/icon/calender.png" alt="" /></span>
+                        </div>
+                        <!-- <div class="input-group">
+                            <img
+                              src="./assets/images/icon/calender.png"
+                              alt=""
+                            />
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="22/05/2024"
+                            />
+                          </div> -->
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputEmail" class="form-label">Nºde vol aller</label>
+                        <div class="input-group">
+                          <img src="./assets/images/icon/plane-down.png" style="width: 18px; height: 18px" alt="" />
+                          <input type="text" class="form-control" placeholder="Ex: AF 6277" />
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputEmail" class="form-label">Atterissage</label>
+                        <div class="dropdown mt-2 custom-time-input"
+                          style=" background-color: #fff; border-radius: 28px;">
+                          <div class="time-picker-container">
+                            <img src="./assets/images/icon/clock.png" class="time-picker-icon" alt="Icon">
+                            <input type="text" class="form-control time-picker-input" placeholder="Heure"
+                              id="timePickerInput2" readonly>
+                            <img src="./assets/images/icon/dropdown.png" class="dropdown-icon2" alt="Dropdown Icon">
+                            <ul class="dropdown-menu custom-dropdown-menu" id="timeDropdown2"
+                              aria-labelledby="dropdownMenuButton">
+                              <li class="dropdown-item">Heure</li>
+                              <li class="dropdown-item">00:00</li>
+                              <li class="dropdown-item">00:15</li>
+                              <li class="dropdown-item">00:30</li>
+                              <li class="dropdown-item">00:45</li>
+                              <li class="dropdown-item">01:00</li>
+                              <li class="dropdown-item">01:15</li>
+                              <li class="dropdown-item">01:30</li>
+                              <li class="dropdown-item">01:45</li>
+                              <li class="dropdown-item">02:00</li>
+                              <li class="dropdown-item">02:15</li>
+                              <li class="dropdown-item">02:30</li>
+                              <li class="dropdown-item">02:45</li>
+                              <li class="dropdown-item">03:00</li>
+                              <li class="dropdown-item">03:15</li>
+                              <li class="dropdown-item">03:30</li>
+                              <li class="dropdown-item">03:45</li>
+                              <li class="dropdown-item">04:00</li>
+                              <li class="dropdown-item">04:15</li>
+                              <li class="dropdown-item">04:30</li>
+                              <li class="dropdown-item">04:45</li>
+                              <li class="dropdown-item">05:00</li>
+                              <li class="dropdown-item">05:15</li>
+                              <li class="dropdown-item">05:30</li>
+                              <li class="dropdown-item">05:45</li>
+                              <li class="dropdown-item">06:00</li>
+                              <li class="dropdown-item">06:15</li>
+                              <li class="dropdown-item">06:30</li>
+                              <li class="dropdown-item">06:45</li>
+                              <li class="dropdown-item">07:00</li>
+                              <li class="dropdown-item">07:15</li>
+                              <li class="dropdown-item">07:30</li>
+                              <li class="dropdown-item">07:45</li>
+                              <li class="dropdown-item">08:00</li>
+                              <li class="dropdown-item">08:15</li>
+                              <li class="dropdown-item">08:30</li>
+                              <li class="dropdown-item">08:45</li>
+                              <li class="dropdown-item">09:00</li>
+                              <li class="dropdown-item">09:15</li>
+                              <li class="dropdown-item">09:30</li>
+                              <li class="dropdown-item">09:45</li>
+                              <li class="dropdown-item">10:00</li>
+                              <li class="dropdown-item">10:15</li>
+                              <li class="dropdown-item">10:30</li>
+                              <li class="dropdown-item">10:45</li>
+                              <li class="dropdown-item">11:00</li>
+                              <li class="dropdown-item">11:15</li>
+                              <li class="dropdown-item">11:30</li>
+                              <li class="dropdown-item">11:45</li>
+                              <li class="dropdown-item">12:00</li>
+                              <li class="dropdown-item">12:15</li>
+                              <li class="dropdown-item">12:30</li>
+                              <li class="dropdown-item">12:45</li>
+                              <li class="dropdown-item">13:00</li>
+                              <li class="dropdown-item">13:15</li>
+                              <li class="dropdown-item">13:30</li>
+                              <li class="dropdown-item">13:45</li>
+                              <li class="dropdown-item">14:00</li>
+                              <li class="dropdown-item">14:15</li>
+                              <li class="dropdown-item">14:30</li>
+                              <li class="dropdown-item">14:45</li>
+                              <li class="dropdown-item">15:00</li>
+                              <li class="dropdown-item">15:15</li>
+                              <li class="dropdown-item">15:30</li>
+                              <li class="dropdown-item">15:45</li>
+                              <li class="dropdown-item">16:00</li>
+                              <li class="dropdown-item">16:15</li>
+                              <li class="dropdown-item">16:30</li>
+                              <li class="dropdown-item">16:45</li>
+                              <li class="dropdown-item">17:00</li>
+                              <li class="dropdown-item">17:15</li>
+                              <li class="dropdown-item">17:30</li>
+                              <li class="dropdown-item">17:45</li>
+                              <li class="dropdown-item">18:00</li>
+                              <li class="dropdown-item">18:15</li>
+                              <li class="dropdown-item">18:30</li>
+                              <li class="dropdown-item">18:45</li>
+                              <li class="dropdown-item">19:00</li>
+                              <li class="dropdown-item">19:15</li>
+                              <li class="dropdown-item">19:30</li>
+                              <li class="dropdown-item">19:45</li>
+                              <li class="dropdown-item">20:00</li>
+                              <li class="dropdown-item">20:15</li>
+                              <li class="dropdown-item">20:30</li>
+                              <li class="dropdown-item">20:45</li>
+                              <li class="dropdown-item">21:00</li>
+                              <li class="dropdown-item">21:15</li>
+                              <li class="dropdown-item">21:30</li>
+                              <li class="dropdown-item">21:45</li>
+                              <li class="dropdown-item">22:00</li>
+                              <li class="dropdown-item">22:15</li>
+                              <li class="dropdown-item">22:30</li>
+                              <li class="dropdown-item">22:45</li>
+                              <li class="dropdown-item">23:00</li>
+                              <li class="dropdown-item">23:15</li>
+                              <li class="dropdown-item">23:30</li>
+                              <li class="dropdown-item">23:45</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="suivant" id="reservation-suivant">Suivant</button>
+          </div>
+          <!-- reservation area stop-->
+          <!-- services area start-->
+          <div class="reservation service-section display-none">
+            <div class="reservation-inner">
+              <div class="reservation-title">
+                <h3>2. Services additionnels</h3>
+              </div>
+              <div class="grid-container p-4 rounded-4">
+                <div class="item item-primary rounded-4 p-4 pb-5 position-relative">
+                  <img src="./assets/images/services/1.png" alt="" />
+                  <h4 class="primary-color mt-3">Parking Extérieur</h4>
+                  <p style="text-decoration: underline">
+                    En savoir plus
+                    <i class="fa-solid fa-angle-right ms-3"></i>
+                  </p>
+                  <div
+                    class="items-bottom d-flex justify-content-between align-items-center rounded-bottom-4 position-absolute bottom-0 start-0 primary-background w-100">
+                    <p class="fw-bold fs-5 text-white">Inclus</p>
+                    <p>
+                      <i class="fa-solid fa-check p-2 rounded-pill primary-color bg-white"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="item border border-2 rounded-4 p-4 pb-5 position-relative">
+                  <img src="./assets/images/services/2.png" alt="" />
+                  <h4 class="mt-3">Lavage Intégral Écologique</h4>
+                  <p style="text-decoration: underline">
+                    En savoir plus
+                    <i class="fa-solid fa-angle-right ms-3"></i>
+                  </p>
+                  <div
+                    class="items-bottom d-flex justify-content-between align-items-center rounded-bottom-4 position-absolute bottom-0 start-0 secondary-background w-100">
+                    <p class="fw-bold fs-5 primary-color">90€</p>
+                    <p>
+                      <i class="fa-solid fa-plus p-2 rounded-pill text-white primary-background"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="item item-primary rounded-4 p-4 pb-5 position-relative">
+                  <img src="./assets/images/services/3.png" alt="" />
+                  <h4 class="primary-color mt-3">Lavage Intérieur</h4>
+                  <p style="text-decoration: underline">
+                    En savoir plus
+                    <i class="fa-solid fa-angle-right ms-3"></i>
+                  </p>
+                  <div
+                    class="items-bottom d-flex justify-content-between align-items-center rounded-bottom-4 position-absolute bottom-0 start-0 primary-background w-100">
+                    <p class="fw-bold fs-5 text-white">59.99€</p>
+                    <p>
+                      <i class="fa-solid fa-check p-2 rounded-pill primary-color bg-white"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="item border border-2 rounded-4 p-4 pb-5 position-relative">
+                  <img src="./assets/images/services/4.png" alt="" />
+                  <h4 class="mt-3">Lavage Extérieur Écologique (SANS EAU)</h4>
+                  <p style="text-decoration: underline">
+                    En savoir plus
+                    <i class="fa-solid fa-angle-right ms-3"></i>
+                  </p>
+                  <div
+                    class="items-bottom d-flex justify-content-between align-items-center rounded-bottom-4 position-absolute bottom-0 start-0 secondary-background w-100">
+                    <p class="fw-bold fs-5 primary-color">59.99€</p>
+                    <p>
+                      <i class="fa-solid fa-plus p-2 rounded-pill text-white primary-background"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="item border border-2 rounded-4 p-4 pb-5 position-relative">
+                  <img src="./assets/images/services/5.png" alt="" />
+                  <h4 class="mt-3">Lavage intégral écologique premium</h4>
+                  <p style="text-decoration: underline">
+                    En savoir plus
+                    <i class="fa-solid fa-angle-right ms-3"></i>
+                  </p>
+                  <div
+                    class="items-bottom d-flex justify-content-between align-items-center rounded-bottom-4 position-absolute bottom-0 start-0 secondary-background w-100">
+                    <p class="fw-bold fs-5 primary-color">129€</p>
+                    <p>
+                      <i class="fa-solid fa-plus p-2 rounded-pill text-white primary-background"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="item border border-2 rounded-4 p-4 pb-5 position-relative">
+                  <img src="./assets/images/services/6.png" alt="" />
+                  <h4 class="mt-3">Niveau de liquide lave glace</h4>
+                  <p style="text-decoration: underline">
+                    En savoir plus
+                    <i class="fa-solid fa-angle-right ms-3"></i>
+                  </p>
+                  <div
+                    class="items-bottom d-flex justify-content-between align-items-center rounded-bottom-4 position-absolute bottom-0 start-0 secondary-background w-100">
+                    <p class="fw-bold fs-5 primary-color">7.99€</p>
+                    <p>
+                      <i class="fa-solid fa-plus p-2 rounded-pill text-white primary-background"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="item border border-2 rounded-4 p-4 pb-5 position-relative">
+                  <img src="./assets/images/services/7.png" alt="" />
+                  <h4 class="mt-3">Recharge Ad blue</h4>
+                  <p style="text-decoration: underline">
+                    En savoir plus
+                    <i class="fa-solid fa-angle-right ms-3"></i>
+                  </p>
+                  <div
+                    class="items-bottom d-flex justify-content-between align-items-center rounded-bottom-4 position-absolute bottom-0 start-0 secondary-background w-100">
+                    <p class="fw-bold fs-5 primary-color">29.99€</p>
+                    <p>
+                      <i class="fa-solid fa-plus p-2 rounded-pill text-white primary-background"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="item border border-2 rounded-4 p-4 pb-5 position-relative">
+                  <img src="./assets/images/services/8.png" alt="" />
+                  <h4 class="mt-3">Bâcher le véhicule</h4>
+                  <p style="text-decoration: underline">
+                    En savoir plus
+                    <i class="fa-solid fa-angle-right ms-3"></i>
+                  </p>
+                  <div
+                    class="items-bottom d-flex justify-content-between align-items-center rounded-bottom-4 position-absolute bottom-0 start-0 secondary-background w-100">
+                    <p class="fw-bold fs-5 primary-color">15€</p>
+                    <p>
+                      <i class="fa-solid fa-plus p-2 rounded-pill text-white primary-background"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="item border border-2 rounded-4 p-4 pb-5 position-relative">
+                  <img src="./assets/images/services/9.png" alt="" />
+                  <h4 class="mt-3">Pression des pneus</h4>
+                  <p style="text-decoration: underline">
+                    En savoir plus
+                    <i class="fa-solid fa-angle-right ms-3"></i>
+                  </p>
+                  <div
+                    class="items-bottom d-flex justify-content-between align-items-center rounded-bottom-4 position-absolute bottom-0 start-0 secondary-background w-100">
+                    <p class="fw-bold fs-5 primary-color">7€</p>
+                    <p>
+                      <i class="fa-solid fa-plus p-2 rounded-pill text-white primary-background"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="item border border-2 rounded-4 p-4 pb-5 position-relative">
+                  <img src="./assets/images/services/10.png" alt="" />
+                  <h4 class="mt-3">Chargeurs Lightning, Type C</h4>
+                  <p style="text-decoration: underline">
+                    En savoir plus
+                    <i class="fa-solid fa-angle-right ms-3"></i>
+                  </p>
+                  <div
+                    class="items-bottom d-flex justify-content-between align-items-center rounded-bottom-4 position-absolute bottom-0 start-0 secondary-background w-100">
+                    <p class="fw-bold fs-5 primary-color">29.99€</p>
+                    <p>
+                      <i class="fa-solid fa-plus p-2 rounded-pill text-white primary-background"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="suivant" id="service-suivant">Suivant</button>
+          </div>
+          <!-- services area stop-->
+          <!-- option area start-->
+          <div class="reservation option-section display-none">
+            <div class="reservation-inner">
+              <div class="reservation-title">
+                <h3>3. Votre option annulation</h3>
+              </div>
+              <div class="grid-container p-4 pb-5 rounded-4">
+                <div class="item-primary rounded-4 p-4 pb-5 position-relative">
+                  <div class="d-flex justify-content-between left-card-top">
+                    <img src="./assets/images/options/check.png" alt="" />
+                    <p class="recommandé-btn rounded-pill">
+                      <i class="fa-solid fa-star me-2"></i>Recommandé
+                    </p>
+                  </div>
+                  <h4 class="primary-color mt-3">
+                    Option modification & Annulation
+                  </h4>
+                  <p>
+                    Modification et annulation sans frais jusqu’au dernier
+                    moment
+                  </p>
+                  <p style="text-decoration: underline">
+                    En savoir plus
+                    <i class="fa-solid fa-angle-right ms-3"></i>
+                  </p>
+                  <div
+                    class="items-bottom d-flex justify-content-between align-items-center rounded-bottom-4 position-absolute bottom-0 start-0 primary-background w-100">
+                    <p class="fw-bold fs-5 text-white">5€</p>
+                    <p>
+                      <i class="fa-solid fa-check p-2 rounded-pill primary-color bg-white"></i>
+                    </p>
+                  </div>
+                </div>
+                <div class="border border-2 rounded-4 p-4 pb-5 position-relative">
+                  <img src="./assets/images/options/cross.png" alt="" />
+                  <h4 class="mt-3">Pas d’option modification / Annulation</h4>
+                  <p>
+                    Pas de remboursement en cas d’annulation. Modifications
+                    possibles avec frais.
+                  </p>
+                  <p style="text-decoration: underline">
+                    En savoir plus
+                    <i class="fa-solid fa-angle-right ms-3"></i>
+                  </p>
+
+                  <div
+                    class="items-bottom d-flex justify-content-between align-items-center rounded-bottom-4 position-absolute bottom-0 start-0 secondary-background w-100">
+                    <p class="fw-bold fs-5 primary-color">Gratuit</p>
+                    <p>
+                      <i class="fa-solid fa-plus p-2 rounded-pill text-white primary-background"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="suivant" id="option-suivant">Suivant</button>
+          </div>
+          <!-- option area stop-->
+          <!-- connexion area start-->
+          <div class="vos-information connexion-section display-none">
+            <div class="content-inner">
+              <div class="reservation-title">
+                <h3>4.Vos informations</h3>
+              </div>
+              <div class="content-inner-content">
+                <div class="form-1">
+                  <div class="form-top">
+                    <h3 class="form-title2">Information personnelles</h3>
+                    <h4 class="form-modifier">
+                      Modifier &nbsp;<i class="fa-regular fa-pen-to-square"></i>
+                    </h4>
+                  </div>
+
+                  <form class="profile-form">
+                    <div class="row" style="row-gap: 20px">
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputName" class="form-label">Nom *</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><img
+                              src="./assets/images/icon/profile-input-icon/input-profile.png" alt="" /></span>
+                          <input type="text" class="form-control" placeholder="Sara" />
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputEmail" class="form-label">Prénom *</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><img
+                              src="./assets/images/icon/profile-input-icon/input-profile.png" alt="" /></span>
+                          <input type="text" class="form-control" placeholder="Tendulkar" />
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputAddress" class="form-label">Adresse e-mail</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><img src="./assets/images/icon/profile-input-icon/email.png"
+                              alt="" /></span>
+                          <input type="email" class="form-control" placeholder="sara@hotmail.fr" />
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputEmail" class="form-label">Téléphone mobile:</label>
+                        <div class="select-box">
+                          <div
+                            class="selected-option d-flex border justify-content-between align-items-center">
+                            <div
+                              class="d-flex align-items-center bg-light cursor-pointer"
+                              style="gap: 8.4px">
+                              <span class="iconify" style="border-radius: 3px;" data-icon="flag:fr-4x3"></span>
+                              <strong>+33</strong>
+                              <span><i class="fa-solid fa-angle-down"></i> </span>
+                            </div>
+                            <input type="tel" name="tel" class="" placeholder="6 86 06 47 78" />
+                          </div>
+                          <div class="options bg-white rounded mt-2 shadow">
+                            <ol class="list-unstyled m-0 p-0"></ol>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="form-1">
+                  <div class="form-top">
+                    <h3 class="form-title2">Adresse postale</h3>
+                    <h4 class="form-modifier">
+                      Modifier &nbsp;<i class="fa-regular fa-pen-to-square"></i>
+                    </h4>
+                  </div>
+                  <form class="profile-form">
+                    <div class="row" style="row-gap: 20px">
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputName" class="form-label">Adresse *</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><img
+                              src="./assets/images/icon/profile-input-icon/input address.png" alt=""></span>
+                          <input type="text" class="form-control" placeholder="15 rue Paradis " />
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputEmail" class="form-label">Adresse(suite)</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><img src="./assets/images/icon/profile-input-icon/address.png"
+                              alt=""></i></span>
+                          <input type="text" class="form-control"
+                            placeholder="Nº Appartement, Bâtiment, Étage          " />
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputAddress" class="form-label">Code Postal *</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><img
+                              src="./assets/images/icon/profile-input-icon/postal-code.png" alt=""></span>
+                          <input type="email" class="form-control" placeholder="750012" />
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputEmail" class="form-label">Ville *</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><img src="./assets/images/icon/profile-input-icon/ville.png"
+                              alt=""></span>
+                          <input type="number" class="form-control" placeholder="Paris" />
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="form-1">
+                  <div class="form-top">
+                    <h3 class="form-title2">Détails véhicule</h3>
+                    <h4 class="form-modifier">
+                      Modifier &nbsp;<i class="fa-regular fa-pen-to-square"></i>
+                    </h4>
+                  </div>
+                  <form class="profile-form">
+                    <div class="row" style="row-gap: 20px">
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputName" class="form-label">Marque et modéle de votre véhicule</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><img src="./assets/images/icon/profile-input-icon/car.png"
+                              alt=""></span>
+                          <input type="text" class="form-control" placeholder="Peugeot 208" />
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6">
+                        <label for="inputEmail" class="form-label">Couleur de votre véhicule</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><img
+                              src="./assets/images/icon/profile-input-icon/color-of-car.png" alt=""></span>
+                          <input type="text" class="form-control" placeholder="Noire" />
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <button class="suivant">Réserver</button>
+          </div>
+          <!-- connexion area stop-->
+          <!--  -->
+        </aside>
+        <!-- right sidebar -->
+        <!-- Reservation right side -->
+        <aside class="right-sidebar reservation-right-side display-block">
+          <h3 class="sidebar-heading">Récapitulatif</h3>
+          <div class="card mb-4">
+            <p class="card-inner-head">Votre séjour</p>
+            <div class="card-top mb-2">
+              <div class="card-top-left">
+                <div class="icon">
+                  <img src="./assets/images/icon/blu-plane.png" alt="" />
+                </div>
+                <div class="text">
+                  <p>Bordeaux-Merignac</p>
+                  <span>05/20/2024 à 08:00</span>
+                </div>
+              </div>
+              <div class="card-top-left">
+                <div class="icon" style="background-color: #f9f3ff">
+                  <img src="./assets/images/icon/purple-plane.png" alt="" />
+                </div>
+                <div class="text">
+                  <p>Bordeaux-Merignac</p>
+                  <span>05/20/2024 à 08:00</span>
+                </div>
+              </div>
+              <div class="vertical-line"></div>
+              <hr class="bottom-hr" />
+              <div class="first-card-bottom">
+                <p>Parking+Voiturier</p>
+                <p style="color: #d63000" class="fw-medium">€58.10</p>
+              </div>
+            </div>
+            <p class="card-inner-head">Vos options</p>
+            <button class="card-top-button">
+              Aucune option sélectionnée
+            </button>
+          </div>
+          <div class="card">
+            <p class="card-inner-head">Montant Total</p>
+            <div class="first-card-bottom">
+              <p>Parking+Voiturier</p>
+              <p style="color: #1b2729" class="fw-medium">€58.10</p>
+            </div>
+            <hr class="bottom-hr" />
+            <div class="first-card-bottom">
+              <p style="color: #1b2729">Total</p>
+              <p style="color: #d63000" class="fw-medium">€58.10</p>
+            </div>
+          </div>
+          <span class="support"><i class="fa-regular fa-comment"></i> Support</span>
+        </aside>
+        <!-- service right side -->
+        <aside class="right-sidebar service-right-side display-none">
+          <h3 class="sidebar-heading">Récapitulatif</h3>
+          <div class="card mb-4">
+            <p class="card-inner-head">Votre séjour</p>
+            <div class="card-top mb-2">
+              <div class="card-top-left">
+                <div class="icon">
+                  <img src="./assets/images/icon/blu-plane.png" alt="" />
+                </div>
+                <div class="text">
+                  <p>Bordeaux-Merignac</p>
+                  <span>05/20/2024 à 08:00</span>
+                </div>
+              </div>
+              <div class="card-top-left">
+                <div class="icon" style="background-color: #f9f3ff">
+                  <img src="./assets/images/icon/purple-plane.png" alt="" />
+                </div>
+                <div class="text">
+                  <p>Bordeaux-Merignac</p>
+                  <span>05/20/2024 à 08:00</span>
+                </div>
+              </div>
+              <div class="vertical-line"></div>
+              <hr class="bottom-hr" />
+              <div class="first-card-bottom">
+                <p>Parking+Voiturier</p>
+                <p style="color: #d63000" class="fw-medium">€58.10</p>
+              </div>
+            </div>
+            <p class="card-inner-head">Vos options</p>
+            <div class="border p-3 rounded-3">
+              <div class="d-flex justify-content-between">
+                <p class="mb-0">Parking Extérieur</p>
+                <p class="mb-0">
+                  <span style="color: #d63000" class="fw-medium">+€19.00€</span>
+                  <span style="
+                        background-color: #d63000;
+                        font-size: 10px;
+                        padding: 5px 8px;
+                      " class="rounded-pill text-white"><i class="fa-solid fa-trash-can"></i></span>
+                </p>
+              </div>
+              <hr class="bottom-hr" />
+              <div class="d-flex justify-content-between">
+                <p class="mb-0">Lavage Intérieur</p>
+                <p class="mb-0">
+                  <span style="color: #d63000" class="fw-medium">+€19.00€</span>
+                  <span style="
+                        background-color: #d63000;
+                        font-size: 10px;
+                        padding: 5px 8px;
+                      " class="rounded-pill text-white"><i class="fa-solid fa-trash-can"></i></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <p class="card-inner-head">Montant Total</p>
+            <div class="first-card-bottom">
+              <p>Parking+Voiturier</p>
+              <p style="color: #1b2729" class="fw-medium">58.10€</p>
+            </div>
+            <div class="first-card-bottom mt-2">
+              <p>Parking Extérieur</p>
+              <p style="color: #1b2729" class="fw-medium">+19.00€</p>
+            </div>
+            <div class="first-card-bottom mt-2">
+              <p>Lavage Intérieur</p>
+              <p style="color: #1b2729" class="fw-medium">+19.00€</p>
+            </div>
+            <hr class="bottom-hr" />
+            <div class="first-card-bottom">
+              <p style="color: #1b2729">Total</p>
+              <p style="color: #d63000" class="fw-medium">96.00€</p>
+            </div>
+          </div>
+          <span class="support"><i class="fa-regular fa-comment"></i> Support</span>
+        </aside>
+        <!-- option right side -->
+        <aside class="right-sidebar option-right-side display-none">
+          <h3 class="sidebar-heading">Récapitulatif</h3>
+          <div class="card mb-4">
+            <p class="card-inner-head">Votre séjour</p>
+            <div class="card-top mb-2">
+              <div class="card-top-left">
+                <div class="icon">
+                  <img src="./assets/images/icon/blu-plane.png" alt="" />
+                </div>
+                <div class="text">
+                  <p>Bordeaux-Merignac</p>
+                  <span>05/20/2024 à 08:00</span>
+                </div>
+              </div>
+              <div class="card-top-left">
+                <div class="icon" style="background-color: #f9f3ff">
+                  <img src="./assets/images/icon/purple-plane.png" alt="" />
+                </div>
+                <div class="text">
+                  <p>Bordeaux-Merignac</p>
+                  <span>05/20/2024 à 08:00</span>
+                </div>
+              </div>
+              <div class="vertical-line"></div>
+              <hr class="bottom-hr" />
+              <div class="first-card-bottom">
+                <p>Parking+Voiturier</p>
+                <p style="color: #d63000" class="fw-medium">€58.10</p>
+              </div>
+            </div>
+            <p class="card-inner-head">Vos options</p>
+            <div class="border p-3 rounded-3">
+              <div class="d-flex justify-content-between">
+                <p class="mb-0">Parking Extérieur</p>
+                <p class="mb-0">
+                  <span style="color: #d63000" class="fw-medium">+€19.00€</span>
+                  <span style="
+                        background-color: #d63000;
+                        font-size: 10px;
+                        padding: 5px 8px;
+                      " class="rounded-pill text-white"><i class="fa-solid fa-trash-can"></i></span>
+                </p>
+              </div>
+              <hr class="bottom-hr" />
+              <div class="d-flex justify-content-between">
+                <p class="mb-0">Lavage Intérieur</p>
+                <p class="mb-0">
+                  <span style="color: #d63000" class="fw-medium">+€19.00€</span>
+                  <span style="
+                        background-color: #d63000;
+                        font-size: 10px;
+                        padding: 5px 8px;
+                      " class="rounded-pill text-white"><i class="fa-solid fa-trash-can"></i></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <p class="card-inner-head">Montant Total</p>
+            <div class="first-card-bottom">
+              <p>Parking+Voiturier</p>
+              <p style="color: #1b2729" class="fw-medium">58.10€</p>
+            </div>
+            <div class="first-card-bottom mt-2">
+              <p>Parking Extérieur</p>
+              <p style="color: #1b2729" class="fw-medium">+19.00€</p>
+            </div>
+            <div class="first-card-bottom mt-2">
+              <p>Lavage Intérieur</p>
+              <p style="color: #1b2729" class="fw-medium">+19.00€</p>
+            </div>
+            <hr class="bottom-hr" />
+            <div class="first-card-bottom">
+              <p style="color: #1b2729">Total</p>
+              <p style="color: #d63000" class="fw-medium">96.00€</p>
+            </div>
+          </div>
+          <span class="support"><i class="fa-regular fa-comment"></i> Support</span>
+        </aside>
+        <!-- connection right side -->
+        <aside class="right-sidebar connexion-right-side display-none">
+          <h3 class="sidebar-heading">Récapitulatif</h3>
+          <div class="card mb-4">
+            <p class="card-inner-head">Votre séjour</p>
+            <div class="card-top mb-2">
+              <div class="card-top-left">
+                <div class="icon">
+                  <img src="./assets/images/icon/blu-plane.png" alt="" />
+                </div>
+                <div class="text">
+                  <p>Bordeaux-Merignac</p>
+                  <span>05/20/2024 à 08:00</span>
+                </div>
+              </div>
+              <div class="card-top-left">
+                <div class="icon" style="background-color: #f9f3ff">
+                  <img src="./assets/images/icon/purple-plane.png" alt="" />
+                </div>
+                <div class="text">
+                  <p>Bordeaux-Merignac</p>
+                  <span>05/20/2024 à 08:00</span>
+                </div>
+              </div>
+              <div class="vertical-line"></div>
+              <hr class="bottom-hr" />
+              <div class="first-card-bottom">
+                <p>Parking+Voiturier</p>
+                <p style="color: #d63000" class="fw-medium">€58.10</p>
+              </div>
+            </div>
+            <p class="card-inner-head">Vos options</p>
+            <div class="border p-3 rounded-3">
+              <div class="d-flex justify-content-between">
+                <p class="mb-0">Parking Extérieur</p>
+                <p class="mb-0">
+                  <span style="color: #d63000" class="fw-medium">+€19.00€</span>
+                  <span style="
+                        background-color: #d63000;
+                        font-size: 10px;
+                        padding: 5px 8px;
+                      " class="rounded-pill text-white"><i class="fa-solid fa-trash-can"></i></span>
+                </p>
+              </div>
+              <hr class="bottom-hr" />
+              <div class="d-flex justify-content-between">
+                <p class="mb-0">Lavage Intérieur</p>
+                <p class="mb-0">
+                  <span style="color: #d63000" class="fw-medium">+€19.00€</span>
+                  <span style="
+                        background-color: #d63000;
+                        font-size: 10px;
+                        padding: 5px 8px;
+                      " class="rounded-pill text-white"><i class="fa-solid fa-trash-can"></i></span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <p class="card-inner-head">Montant Total</p>
+            <div class="first-card-bottom">
+              <p>Parking+Voiturier</p>
+              <p style="color: #1b2729" class="fw-medium">58.10€</p>
+            </div>
+            <div class="first-card-bottom mt-2">
+              <p>Parking Extérieur</p>
+              <p style="color: #1b2729" class="fw-medium">+19.00€</p>
+            </div>
+            <div class="first-card-bottom mt-2">
+              <p>Lavage Intérieur</p>
+              <p style="color: #1b2729" class="fw-medium">+19.00€</p>
+            </div>
+            <hr class="bottom-hr" />
+            <div class="first-card-bottom">
+              <p style="color: #1b2729">Total</p>
+              <p style="color: #d63000" class="fw-medium">96.00€</p>
+            </div>
+          </div>
+          <span class="support"><i class="fa-regular fa-comment"></i> Support</span>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- add js file -->
+  <script src="./js/index.js"></script>
+  <!-- custom script -->
+  <script src="./js/sidebar.js"></script>
+  <!-- custom script for country code-->
+  <script src="./js/countryCode.js"></script>
+  <!-- bootstrap cdn  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#datepicker').datepicker({
+        format: 'mm/dd/yyyy',
+        autoclose: true,
+        todayHighlight: true
+      });
+      $('#datepicker2').datepicker({
+        format: 'mm/dd/yyyy',
+        autoclose: true,
+        todayHighlight: true
+      });
+    });
+
+    
+  </script>
+</body>
+
+</html>

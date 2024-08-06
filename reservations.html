@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- css link -->
+    <link rel="stylesheet" href="./styles/reservations.css" />
+    <link rel="stylesheet" href="./styles/navbar.css" />
+
+    <!-- fontawesome link -->
+    <script
+      src="https://kit.fontawesome.com/722bf37857.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- title -->
+    <title>Reservation</title>
+  </head>
+
+  <body>
+      <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="./assets/images/home/logo.png" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+          <span class="navbar-toggler-icon"
+          ><img src="./assets/images/humberger.png" alt=""
+        /></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item reserve">
+                <a class="nav-link fw-bold" href="reservation.html">Réserver</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Mon compte <span><img src="./assets/images/home/Icon.png" alt=""></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="profile-edit.html">Profil</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="reservations.html"
+                      >Réservations</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="historique.html"
+                      >Historique des réservations</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">Deconnexion</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- mobile sidebar -->
+      <div class="nav-overlay">
+        <!-- mobile sidebar -->
+        <div class="mobile-sidebar">
+          <div class="mobile-head">
+            <div class="mobile-logo">
+              <img src="./assets/images/home/logo.png" alt="" />
+            </div>
+            <p class="cross"><img src="./assets/images/cross.png" alt="" /></p>
+          </div>
+          <ul class="navbar-nav ms-auto py-3">
+            <li class="nav-item me-4">
+              <a class="nav-link" href="reservation.html">Réserver</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle dropdown-toggle1"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Airports
+                <img
+                  class="dropdown-icon dropdownIcon"
+                  src="./assets/images/home/Icon.png"
+                  alt="Dropdown Icon"
+                />
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Airports 1</a></li>
+                <li><a class="dropdown-item" href="#">Airports 2</a></li>
+                <li><a class="dropdown-item" href="#">Airports 3</a></li>
+              </ul>
+            </li>
+            <a
+              class="sidebar-button"
+              href="login.html"
+              style="text-decoration: none"
+            >
+              <button
+                class="navbar-primary-btn btn-block text-white rounded-pill"
+              >
+                Se Connecter
+              </button>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- main area -->
+    <main class="main">
+      <aside class="sidebar">
+        <ul>
+          <li>
+            <a href="profile.html"
+              ><span class="sidebar-li-inner"
+                ><span><img src="./assets/images/icon/profile.png" alt=""></i></span>
+                <span class="text">Profil</span></span
+              >
+              <span><i class="fa-solid fa-chevron-right right-arrow"></i></span
+            ></a>
+          </li>
+          <li class="active">
+            <a href="reservation.html"
+              ><span class="sidebar-li-inner"
+                ><span><img src="./assets/images/icon/reservation-color.png" alt=""></span>
+                <span class="text">Réservations</span></span
+              >
+              <span><i class="fa-solid fa-chevron-right right-arrow"></i></span
+            ></a>
+          </li>
+          <li>
+            <a href="historique.html"
+              ><span class="sidebar-li-inner"
+                ><span><img src="./assets/images/icon/historiq.png" alt=""></span>
+                <span class="text">Historique des réservations</span></span
+              >
+              <span><i class="fa-solid fa-chevron-right right-arrow"></i></span
+            ></a>
+          </li>
+        </ul>
+      </aside>
+      <section class="content">
+        <div class="content-top">
+          <h3 class="content-title">Réservations</h3>
+          <button class="reserver-button">
+            Réserver&nbsp;<i class="fa-regular fa-square-plus"></i>
+          </button>
+        </div>
+        <div class="content-inner">
+          <!-- 1st row -->
+          <div class="top-reserve">
+            <h3 class="reserve-title">
+              Réservation à venir dans les prochaines 24 heures
+            </h3>
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+                <div class="reserve-card">
+                  <div class="outer1">
+                    <div class="inner">
+                      <i class="top right"></i>
+                      <div class="card-content">
+                        <div class="card-top">
+                          <div class="card-top-left">
+                            <div class="icon">
+                              <img
+                                src="./assets/images/icon/blu-plane.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="text">
+                              <p>Bordeaux-Merignac</p>
+                              <span>05/20/2024 à 08:00</span>
+                            </div>
+                          </div>
+                          <div class="card-top-left row-2">
+                            <div class="icon" style="background-color: #f9f3ff">
+                              <img
+                                src="./assets/images/icon/purple-plane.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="text">
+                              <p>Bordeaux-Merignac</p>
+                              <span>05/20/2024 à 08:00</span>
+                            </div>
+                          </div>
+                          <div class="card-top-left">
+                            <button class="btn reserve-card-btn">
+                              Voir les détails
+                            </button>
+                          </div>
+                          <div class="vertical-line"></div>
+                        </div>
+                      </div>
+                      <i class="bottom right"></i>
+                    </div>
+                  </div>
+                  <div class="outer2">
+                    <div class="inner">
+                      <i class="top left"></i>
+                      <div class="card-content">
+                        <div class="card-top">
+                          <div class="card-top-right">
+                            <div class="text">
+                              <p>Vol aller</p>
+                              <span>FL 6975</span>
+                            </div>
+                          </div>
+                          <div class="card-top-right right-row-2">
+                            <div class="text">
+                              <p>Vol de retour</p>
+                              <span>FL 6975</span>
+                            </div>
+                          </div>
+                          <div class="card-top-right">
+                            <div class="text">
+                              <span class="euro">100 €</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <i class="bottom left"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div class="reserve-card">
+                  <div class="outer1">
+                    <div class="inner">
+                      <i class="top right"></i>
+                      <div class="card-content">
+                        <div class="card-top">
+                          <div class="card-top-left">
+                            <div class="icon">
+                              <img
+                                src="./assets/images/icon/blu-plane.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="text">
+                              <p>Bordeaux-Merignac</p>
+                              <span>05/20/2024 à 08:00</span>
+                            </div>
+                          </div>
+                          <div class="card-top-left row-2">
+                            <div class="icon" style="background-color: #f9f3ff">
+                              <img
+                                src="./assets/images/icon/purple-plane.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="text">
+                              <p>Bordeaux-Merignac</p>
+                              <span>05/20/2024 à 08:00</span>
+                            </div>
+                          </div>
+                          <div class="card-top-left">
+                            <button class="btn reserve-card-btn">
+                              Voir les détails
+                            </button>
+                          </div>
+                          <div class="vertical-line"></div>
+                        </div>
+                      </div>
+                      <i class="bottom right"></i>
+                    </div>
+                  </div>
+                  <div class="outer2">
+                    <div class="inner">
+                      <i class="top left"></i>
+                      <div class="card-content">
+                        <div class="card-top">
+                          <div class="card-top-right">
+                            <div class="text">
+                              <p>Vol aller</p>
+                              <span>FL 6975</span>
+                            </div>
+                          </div>
+                          <div class="card-top-right right-row-2">
+                            <div class="text">
+                              <p>Vol de retour</p>
+                              <span>FL 6975</span>
+                            </div>
+                          </div>
+                          <div class="card-top-right">
+                            <div class="text">
+                              <span class="euro">100 €</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <i class="bottom left"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2nd row -->
+          <div class="top-reserve">
+            <h3 class="reserve-title">
+              Réservation à venir dans les 2 à 5 prochains jours
+            </h3>
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+                <div class="reserve-card">
+                  <div class="outer1">
+                    <div class="inner">
+                      <i class="top right"></i>
+                      <div class="card-content">
+                        <div class="card-top">
+                          <div class="card-top-left">
+                            <div class="icon">
+                              <img
+                                src="./assets/images/icon/blu-plane.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="text">
+                              <p>Bordeaux-Merignac</p>
+                              <span>05/20/2024 à 08:00</span>
+                            </div>
+                          </div>
+                          <div class="card-top-left row-2">
+                            <div class="icon" style="background-color: #f9f3ff">
+                              <img
+                                src="./assets/images/icon/purple-plane.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="text">
+                              <p>Bordeaux-Merignac</p>
+                              <span>05/20/2024 à 08:00</span>
+                            </div>
+                          </div>
+                          <div class="card-top-left">
+                            <button class="btn reserve-card-btn">
+                              Voir les détails
+                            </button>
+                          </div>
+                          <div class="vertical-line"></div>
+                        </div>
+                      </div>
+                      <i class="bottom right"></i>
+                    </div>
+                  </div>
+                  <div class="outer2">
+                    <div class="inner">
+                      <i class="top left"></i>
+                      <div class="card-content">
+                        <div class="card-top">
+                          <div class="card-top-right">
+                            <div class="text">
+                              <p>Vol aller</p>
+                              <span>FL 6975</span>
+                            </div>
+                          </div>
+                          <div class="card-top-right right-row-2">
+                            <div class="text">
+                              <p>Vol de retour</p>
+                              <span>FL 6975</span>
+                            </div>
+                          </div>
+                          <div class="card-top-right">
+                            <div class="text">
+                              <span class="euro">100 €</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <i class="bottom left"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div class="reserve-card">
+                  <div class="outer1">
+                    <div class="inner">
+                      <i class="top right"></i>
+                      <div class="card-content">
+                        <div class="card-top">
+                          <div class="card-top-left">
+                            <div class="icon">
+                              <img
+                                src="./assets/images/icon/blu-plane.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="text">
+                              <p>Bordeaux-Merignac</p>
+                              <span>05/20/2024 à 08:00</span>
+                            </div>
+                          </div>
+                          <div class="card-top-left row-2">
+                            <div class="icon" style="background-color: #f9f3ff">
+                              <img
+                                src="./assets/images/icon/purple-plane.png"
+                                alt=""
+                              />
+                            </div>
+                            <div class="text">
+                              <p>Bordeaux-Merignac</p>
+                              <span>05/20/2024 à 08:00</span>
+                            </div>
+                          </div>
+                          <div class="card-top-left">
+                            <button class="btn reserve-card-btn">
+                              Voir les détails
+                            </button>
+                          </div>
+                          <div class="vertical-line"></div>
+                        </div>
+                      </div>
+                      <i class="bottom right"></i>
+                    </div>
+                  </div>
+                  <div class="outer2">
+                    <div class="inner">
+                      <i class="top left"></i>
+                      <div class="card-content">
+                        <div class="card-top">
+                          <div class="card-top-right">
+                            <div class="text">
+                              <p>Vol aller</p>
+                              <span>FL 6975</span>
+                            </div>
+                          </div>
+                          <div class="card-top-right right-row-2">
+                            <div class="text">
+                              <p>Vol de retour</p>
+                              <span>FL 6975</span>
+                            </div>
+                          </div>
+                          <div class="card-top-right">
+                            <div class="text">
+                              <span class="euro">100 €</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <i class="bottom left"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- add js file -->
+    <script src="./js/index.js"></script>
+    <!-- custom script -->
+    <script src="./js/sidebar.js"></script>
+
+    <!--  Bootstrap CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

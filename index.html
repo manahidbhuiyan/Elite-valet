@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+  
+    <!-- css link  -->
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    
+    <!-- font awesome  -->
+    <script
+      src="https://kit.fontawesome.com/722bf37857.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- swiper slider cdn-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <title>Elite Valet</title>
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+     
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="./assets/images/home/logo.png" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"
+              ><img src="./assets/images/humberger.png" alt=""
+            /></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto large-navbar">
+              <li class="nav-item me-4">
+                <a class="nav-link fw-bold" href="reservation.html">Réserver</a>
+              </li>
+              <a class="d-flex" href="login.html" style="text-decoration: none">
+                <button
+                  class="navbar-primary-btn btn-block text-white rounded-pill"
+                >
+                  Se Connecter
+                </button>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- mobile sidebar -->
+      <div class="nav-overlay">
+        <!-- mobile sidebar -->
+        <div class="mobile-sidebar">
+          <div class="mobile-head">
+            <div class="mobile-logo">
+              <img src="./assets/images/home/logo.png" alt="" />
+            </div>
+            <p class="cross"><img src="./assets/images/cross.png" alt="" /></p>
+          </div>
+          <ul class="navbar-nav ms-auto py-3">
+            <li class="nav-item me-4">
+              <a class="nav-link" href="reservation.html">Réserver</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle dropdown-toggle1"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Airports
+                <img
+                  class="dropdown-icon dropdownIcon"
+                  src="./assets/images/home/Icon.png"
+                  alt="Dropdown Icon"
+                />
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Airports 1</a></li>
+                <li><a class="dropdown-item" href="#">Airports 2</a></li>
+                <li><a class="dropdown-item" href="#">Airports 3</a></li>
+              </ul>
+            </li>
+            <a
+              class="sidebar-button"
+              href="login.html"
+              style="text-decoration: none"
+            >
+              <button
+                class="navbar-primary-btn btn-block text-white rounded-pill"
+              >
+                Se Connecter
+              </button>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero  -->
+      <section class="hero-container container-width">
+        <div class="hero-content-container">
+          <div class="hero-title-container">
+            <h4 class="section-title2 hero-title1 fw-bold">
+              Pour une expérience de voyage fluide et pratique.
+            </h4>
+            <h1 class="hero-title fw-bold">
+              Optez pour notre service de voiturier
+            </h1>
+          </div>
+          <div class="hero-form-container p-3">
+            <div class="form-container">
+              <div class="position-relative">
+                <form class="background1 p-3 rounded-4">
+                  <h4 class="fw-bold" style="padding: 10px 0">Aller</h4>
+                  <div class="row mb-4">
+                    <div class="col-md-12">
+                      <label for="lieuDepart" class="form-label"
+                        >Lieu De Depart</label
+                      >
+                      <select
+                        class="form-select text-dark rounded-pill ps-3"
+                        id="lieuDepart"
+                      >
+                        <option selected>Sélectionner</option>
+                        <option>Location 1</option>
+                        <option>Location 2</option>
+                        <option>Location 3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col-md-6 mb-3">
+                      <label for="dateAller">Date Aller</label>
+                      <div class="input-group mt-2">
+                        <input type="text" class="form-control date-input" id="datepicker" placeholder="Date">
+                        <span class="input-group-text"><img src="./assets/images/icon/calender.png" alt="" /></span>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="heureDepot">Heure Depot</label>
+                      <div class="dropdown mt-2 custom-time-input"
+                          style=" background-color: #fff; border-radius: 20px;">
+                          <div class="time-picker-container">
+                            <img src="./assets/images/icon/clock.png" class="time-picker-icon" alt="Icon">
+                            <input type="text" class="form-control time-picker-input" placeholder="Heure"
+                              id="timePickerInput1" readonly>
+                            <img src="./assets/images/icon/dropdown.png" class="dropdown-icon1" alt="Dropdown Icon">
+                            <ul class="dropdown-menu custom-dropdown-menu" id="timeDropdown1">
+                              <li class="dropdown-item">Heure</li>
+                              <li class="dropdown-item">00:00</li>
+                              <li class="dropdown-item">00:15</li>
+                              <li class="dropdown-item">00:30</li>
+                              <li class="dropdown-item">00:45</li>
+                              <li class="dropdown-item">01:00</li>
+                              <li class="dropdown-item">01:15</li>
+                              <li class="dropdown-item">01:30</li>
+                              <li class="dropdown-item">01:45</li>
+                              <li class="dropdown-item">02:00</li>
+                              <li class="dropdown-item">02:15</li>
+                              <li class="dropdown-item">02:30</li>
+                              <li class="dropdown-item">02:45</li>
+                              <li class="dropdown-item">03:00</li>
+                              <li class="dropdown-item">03:15</li>
+                              <li class="dropdown-item">03:30</li>
+                              <li class="dropdown-item">03:45</li>
+                              <li class="dropdown-item">04:00</li>
+                              <li class="dropdown-item">04:15</li>
+                              <li class="dropdown-item">04:30</li>
+                              <li class="dropdown-item">04:45</li>
+                              <li class="dropdown-item">05:00</li>
+                              <li class="dropdown-item">05:15</li>
+                              <li class="dropdown-item">05:30</li>
+                              <li class="dropdown-item">05:45</li>
+                              <li class="dropdown-item">06:00</li>
+                              <li class="dropdown-item">06:15</li>
+                              <li class="dropdown-item">06:30</li>
+                              <li class="dropdown-item">06:45</li>
+                              <li class="dropdown-item">07:00</li>
+                              <li class="dropdown-item">07:15</li>
+                              <li class="dropdown-item">07:30</li>
+                              <li class="dropdown-item">07:45</li>
+                              <li class="dropdown-item">08:00</li>
+                              <li class="dropdown-item">08:15</li>
+                              <li class="dropdown-item">08:30</li>
+                              <li class="dropdown-item">08:45</li>
+                              <li class="dropdown-item">09:00</li>
+                              <li class="dropdown-item">09:15</li>
+                              <li class="dropdown-item">09:30</li>
+                              <li class="dropdown-item">09:45</li>
+                              <li class="dropdown-item">10:00</li>
+                              <li class="dropdown-item">10:15</li>
+                              <li class="dropdown-item">10:30</li>
+                              <li class="dropdown-item">10:45</li>
+                              <li class="dropdown-item">11:00</li>
+                              <li class="dropdown-item">11:15</li>
+                              <li class="dropdown-item">11:30</li>
+                              <li class="dropdown-item">11:45</li>
+                              <li class="dropdown-item">12:00</li>
+                              <li class="dropdown-item">12:15</li>
+                              <li class="dropdown-item">12:30</li>
+                              <li class="dropdown-item">12:45</li>
+                              <li class="dropdown-item">13:00</li>
+                              <li class="dropdown-item">13:15</li>
+                              <li class="dropdown-item">13:30</li>
+                              <li class="dropdown-item">13:45</li>
+                              <li class="dropdown-item">14:00</li>
+                              <li class="dropdown-item">14:15</li>
+                              <li class="dropdown-item">14:30</li>
+                              <li class="dropdown-item">14:45</li>
+                              <li class="dropdown-item">15:00</li>
+                              <li class="dropdown-item">15:15</li>
+                              <li class="dropdown-item">15:30</li>
+                              <li class="dropdown-item">15:45</li>
+                              <li class="dropdown-item">16:00</li>
+                              <li class="dropdown-item">16:15</li>
+                              <li class="dropdown-item">16:30</li>
+                              <li class="dropdown-item">16:45</li>
+                              <li class="dropdown-item">17:00</li>
+                              <li class="dropdown-item">17:15</li>
+                              <li class="dropdown-item">17:30</li>
+                              <li class="dropdown-item">17:45</li>
+                              <li class="dropdown-item">18:00</li>
+                              <li class="dropdown-item">18:15</li>
+                              <li class="dropdown-item">18:30</li>
+                              <li class="dropdown-item">18:45</li>
+                              <li class="dropdown-item">19:00</li>
+                              <li class="dropdown-item">19:15</li>
+                              <li class="dropdown-item">19:30</li>
+                              <li class="dropdown-item">19:45</li>
+                              <li class="dropdown-item">20:00</li>
+                              <li class="dropdown-item">20:15</li>
+                              <li class="dropdown-item">20:30</li>
+                              <li class="dropdown-item">20:45</li>
+                              <li class="dropdown-item">21:00</li>
+                              <li class="dropdown-item">21:15</li>
+                              <li class="dropdown-item">21:30</li>
+                              <li class="dropdown-item">21:45</li>
+                              <li class="dropdown-item">22:00</li>
+                              <li class="dropdown-item">22:15</li>
+                              <li class="dropdown-item">22:30</li>
+                              <li class="dropdown-item">22:45</li>
+                              <li class="dropdown-item">23:00</li>
+                              <li class="dropdown-item">23:15</li>
+                              <li class="dropdown-item">23:30</li>
+                              <li class="dropdown-item">23:45</li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </form>
+                <form class="background1 p-3 rounded-4 mt-4">
+                  <h4 class="fw-bold" style="padding: 10px 0">Retour</h4>
+                  <div class="row mb-4">
+                    <div class="col-md-12">
+                      <label for="lieuDepart" class="form-label"
+                        >Lieu De Depart</label
+                      >
+                      <select
+                        class="form-select text-dark rounded-pill ps-3"
+                        id="lieuDepart"
+                      >
+                        <option selected>Sélectionner</option>
+                        <option>Location 1</option>
+                        <option>Location 2</option>
+                        <option>Location 3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row mb-4">
+                    <div class="col-md-6 mb-3">
+                      <label for="dateAller">Date Retour</label>
+                      <div class="input-group mt-2">
+                        <input type="text" class="form-control date-input" id="datepicker2" placeholder="Date">
+                        <span class="input-group-text"><img src="./assets/images/icon/calender.png" alt="" /></span>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                      <label for="heureDepot">Atterrissage</label>
+                      <div class="dropdown mt-2 custom-time-input"
+                          style=" background-color: #fff; border-radius: 20px;">
+                          <div class="time-picker-container">
+                            <img src="./assets/images/icon/clock.png" class="time-picker-icon" alt="Icon">
+                            <input type="text" class="form-control time-picker-input" placeholder="Heure"
+                              id="timePickerInput2" readonly>
+                            <img src="./assets/images/icon/dropdown.png" class="dropdown-icon2" alt="Dropdown Icon">
+                            <ul class="dropdown-menu custom-dropdown-menu" id="timeDropdown2"
+                              aria-labelledby="dropdownMenuButton">
+                              <li class="dropdown-item">Heure</li>
+                              <li class="dropdown-item">00:00</li>
+                              <li class="dropdown-item">00:15</li>
+                              <li class="dropdown-item">00:30</li>
+                              <li class="dropdown-item">00:45</li>
+                              <li class="dropdown-item">01:00</li>
+                              <li class="dropdown-item">01:15</li>
+                              <li class="dropdown-item">01:30</li>
+                              <li class="dropdown-item">01:45</li>
+                              <li class="dropdown-item">02:00</li>
+                              <li class="dropdown-item">02:15</li>
+                              <li class="dropdown-item">02:30</li>
+                              <li class="dropdown-item">02:45</li>
+                              <li class="dropdown-item">03:00</li>
+                              <li class="dropdown-item">03:15</li>
+                              <li class="dropdown-item">03:30</li>
+                              <li class="dropdown-item">03:45</li>
+                              <li class="dropdown-item">04:00</li>
+                              <li class="dropdown-item">04:15</li>
+                              <li class="dropdown-item">04:30</li>
+                              <li class="dropdown-item">04:45</li>
+                              <li class="dropdown-item">05:00</li>
+                              <li class="dropdown-item">05:15</li>
+                              <li class="dropdown-item">05:30</li>
+                              <li class="dropdown-item">05:45</li>
+                              <li class="dropdown-item">06:00</li>
+                              <li class="dropdown-item">06:15</li>
+                              <li class="dropdown-item">06:30</li>
+                              <li class="dropdown-item">06:45</li>
+                              <li class="dropdown-item">07:00</li>
+                              <li class="dropdown-item">07:15</li>
+                              <li class="dropdown-item">07:30</li>
+                              <li class="dropdown-item">07:45</li>
+                              <li class="dropdown-item">08:00</li>
+                              <li class="dropdown-item">08:15</li>
+                              <li class="dropdown-item">08:30</li>
+                              <li class="dropdown-item">08:45</li>
+                              <li class="dropdown-item">09:00</li>
+                              <li class="dropdown-item">09:15</li>
+                              <li class="dropdown-item">09:30</li>
+                              <li class="dropdown-item">09:45</li>
+                              <li class="dropdown-item">10:00</li>
+                              <li class="dropdown-item">10:15</li>
+                              <li class="dropdown-item">10:30</li>
+                              <li class="dropdown-item">10:45</li>
+                              <li class="dropdown-item">11:00</li>
+                              <li class="dropdown-item">11:15</li>
+                              <li class="dropdown-item">11:30</li>
+                              <li class="dropdown-item">11:45</li>
+                              <li class="dropdown-item">12:00</li>
+                              <li class="dropdown-item">12:15</li>
+                              <li class="dropdown-item">12:30</li>
+                              <li class="dropdown-item">12:45</li>
+                              <li class="dropdown-item">13:00</li>
+                              <li class="dropdown-item">13:15</li>
+                              <li class="dropdown-item">13:30</li>
+                              <li class="dropdown-item">13:45</li>
+                              <li class="dropdown-item">14:00</li>
+                              <li class="dropdown-item">14:15</li>
+                              <li class="dropdown-item">14:30</li>
+                              <li class="dropdown-item">14:45</li>
+                              <li class="dropdown-item">15:00</li>
+                              <li class="dropdown-item">15:15</li>
+                              <li class="dropdown-item">15:30</li>
+                              <li class="dropdown-item">15:45</li>
+                              <li class="dropdown-item">16:00</li>
+                              <li class="dropdown-item">16:15</li>
+                              <li class="dropdown-item">16:30</li>
+                              <li class="dropdown-item">16:45</li>
+                              <li class="dropdown-item">17:00</li>
+                              <li class="dropdown-item">17:15</li>
+                              <li class="dropdown-item">17:30</li>
+                              <li class="dropdown-item">17:45</li>
+                              <li class="dropdown-item">18:00</li>
+                              <li class="dropdown-item">18:15</li>
+                              <li class="dropdown-item">18:30</li>
+                              <li class="dropdown-item">18:45</li>
+                              <li class="dropdown-item">19:00</li>
+                              <li class="dropdown-item">19:15</li>
+                              <li class="dropdown-item">19:30</li>
+                              <li class="dropdown-item">19:45</li>
+                              <li class="dropdown-item">20:00</li>
+                              <li class="dropdown-item">20:15</li>
+                              <li class="dropdown-item">20:30</li>
+                              <li class="dropdown-item">20:45</li>
+                              <li class="dropdown-item">21:00</li>
+                              <li class="dropdown-item">21:15</li>
+                              <li class="dropdown-item">21:30</li>
+                              <li class="dropdown-item">21:45</li>
+                              <li class="dropdown-item">22:00</li>
+                              <li class="dropdown-item">22:15</li>
+                              <li class="dropdown-item">22:30</li>
+                              <li class="dropdown-item">22:45</li>
+                              <li class="dropdown-item">23:00</li>
+                              <li class="dropdown-item">23:15</li>
+                              <li class="dropdown-item">23:30</li>
+                              <li class="dropdown-item">23:45</li>
+                            </ul>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </form>
+                <img
+                  src="./assets/images/home/from-image.png"
+                  alt=""
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    max-width: 100%;
+                    max-height: 100%;
+                  "
+                />
+              </div>
+              <div class="d-flex justify-content-center mt-4">
+                <button
+                  type="submit"
+                  class="primary-btn btn-block text-white rounded-pill d-flex align-items-center gap-2"
+                >
+                  Obtenir mon tarif
+                  <img src="./assets/images/home/euro.png" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How Its Works  -->
+      <section class="container-width howItWork">
+        <div class="works-content">
+          <h4 class="section-title2 works-title fw-bold pt-5">
+            Comment ça fonctionne
+          </h4>
+          <h1 class="section-title fw-bold">
+            Simplifiez votre voyage avec notre service de voiturier
+          </h1>
+          <p>
+            Simplifiez votre voyage en nous confiant votre véhicule dès votre
+            arrivée. Nos voituriers qualifiés, disponibles 7 jours sur 7 de 4h30
+            à 23h30, assurent un voyage sans stress. Pour votre retour votre
+            véhicule vous attendra sur votre terminal, prêt à prendre la route !
+          </p>
+        </div>
+
+        <div class="mt-5">
+          <!-- for small device -->
+          <!-- Slider main container -->
+          <div class="swiper swiper2 mobile-bg">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide swiper-slide-first">
+                <div class="text-center">
+                  <img src="./assets/images/home/car.png" alt="" class="mb-3" />
+                  <h5 class="card-title fw-bold">Réserver</h5>
+                  <p>Réservez directement sur notre site internet</p>
+                  <p
+                    class="works-item-number fs-4 fw-bold background1 rounded-pill"
+                  >
+                    01
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-first">
+                <div class="text-center">
+                  <img src="./assets/images/home/key.png" alt="" class="mb-3" />
+                  <h5 class="card-title fw-bold">Remettre les clefs</h5>
+                  <p>
+                    Votre voiturier vous attendra sur votre dépose minute de
+                    départ et garera votre véhicule dans nos parkings privés et
+                    sécurisés à proximité de l’aéroport.
+                  </p>
+                  <p
+                    class="works-item-number fs-4 fw-bold background1 rounded-pill"
+                  >
+                    02
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-first">
+                <div class="text-center">
+                  <img
+                    src="./assets/images/home/car2.png"
+                    alt=""
+                    class="mb-3"
+                  />
+                  <h5 class="card-title fw-bold">Récupérer</h5>
+                  <p>
+                    Votre véhicule vous sera restitué par nos voituriers au même
+                    endroit, à votre retour.
+                  </p>
+                  <p
+                    class="works-item-number fs-4 fw-bold background1 rounded-pill"
+                  >
+                    03
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-prev swiper-prev-arrow"></div>
+            <div class="swiper-button-next swiper-right-arrow"></div>
+          </div>
+          <!-- for large device -->
+          <div class="row g-4 pt-5 mt-5 how-its-work-large">
+            <div class="col-12 col-md-4 text-center z-1 works-item">
+              <img src="./assets/images/home/car.png" alt="" class="mb-3" />
+              <h5 class="card-title fw-bold">Réserver</h5>
+              <p>Réservez directement sur notre site internet</p>
+              <p
+                class="works-item-number fs-4 fw-bold background1 rounded-pill"
+              >
+                01
+              </p>
+            </div>
+            <div class="col-12 col-md-4 text-center margin-top works-item z-1">
+              <img src="./assets/images/home/key.png" alt="" class="mb-3" />
+              <h5 class="card-title fw-bold">Remettre les clefs</h5>
+              <p>
+                Votre voiturier vous attendra sur votre dépose minute de départ
+                et garera votre véhicule dans nos parkings privés et sécurisés à
+                proximité de l’aéroport.
+              </p>
+              <p
+                class="works-item-number fs-4 fw-bold background1 rounded-pill"
+              >
+                02
+              </p>
+            </div>
+            <div class="col-12 col-md-4 text-center works-item z-1">
+              <img src="./assets/images/home/car2.png" alt="" class="mb-3" />
+              <h5 class="card-title fw-bold">Récupérer</h5>
+              <p>
+                Votre véhicule vous sera restitué par nos voituriers au même
+                endroit, à votre retour.
+              </p>
+              <p
+                class="works-item-number fs-4 fw-bold background1 rounded-pill"
+              >
+                03
+              </p>
+            </div>
+          </div>
+          <img
+            src="./assets/images/home/line.png"
+            alt=""
+            class="how-its-work-line z-0 w-100"
+          />
+        </div>
+      </section>
+
+      <!-- Advantages  -->
+      <section class="container-width">
+        <div class="advantages-container rounded-5 px-5">
+          <h1
+            class="section-title advantage-absolute-top text-center fw-bold px-4"
+          >
+            Les avantages d’Elite Valet
+          </h1>
+          <div class="row g-5 advantages-item-container">
+            <div class="col-12 col-md-4">
+              <img src="./assets/images/home/1.png" alt="" class="mb-3" />
+              <h5 class="card-title fw-bold mb-2">Confort et Simplicité</h5>
+              <p>
+                Profitez d’un service sans tracas. Plus besoin de chercher une
+                place de parking, notre équipe s’occupe de tout.
+              </p>
+            </div>
+            <div class="col-12 col-md-4">
+              <img src="./assets/images/home/2.png" alt="" class="mb-3" />
+              <h5 class="card-title fw-bold mb-2">Sécurité Maximale</h5>
+              <p>
+                Votre voiture est stationnée dans un endroit sécurisé, vous
+                offrant une tranquillité d’esprit totale.
+              </p>
+            </div>
+            <div class="col-12 col-md-4">
+              <img src="./assets/images/home/3.png" alt="" class="mb-3" />
+              <h5 class="card-title fw-bold mb-2">Service Personnalisé</h5>
+              <p>
+                Que vous voyagiez pour affaires ou pour le plaisir, notre équipe
+                vous offre une expérience sur mesure.
+              </p>
+            </div>
+          </div>
+          <p class="advantage-absolute-bottom text-center fw-bold rounded-5">
+            Une fois que vous y aurez goûté, vous ne voyagerez plus de la même
+            manière !
+          </p>
+        </div>
+      </section>
+
+      <!-- Comfort  -->
+      <section class="comfort-container">
+        <div class="w-100">
+          <img
+            src="./assets/images/home/Confort-car.png"
+            alt=""
+            class="w-100"
+          />
+        </div>
+        <div class="w-100 px-4">
+          <div class="comfort-info">
+            <h4 class="section-title2 comfort-title fw-bold">
+              Confort garanti
+            </h4>
+            <h1 class="section-title fw-bold">
+              Elite valet, votre confort avant tout
+            </h1>
+          </div>
+          <p>
+            Quoi de mieux que retrouver son véhicule propre après un long trajet
+            éprouvant, n’est-ce pas ? Explorez nos divers services, tels que le
+            nettoyage complet intérieur et extérieur, la vérification de la
+            pression des pneus, afin de retrouver votre véhicule dans un état
+            optimal, découvrez en plus au moment de votre réservation !
+          </p>
+        </div>
+      </section>
+
+      <!-- Testimonials  -->
+      <section class="testimonials_container py-3 py-md-4 py-lg-5">
+        <div class="container-width py-5">
+          <h1 class="section-title text-center fw-bold pb-5">
+            Une clientèle fidèle qui ne cesse de <br />
+            nous faire confiance
+          </h1>
+
+          <!-- Slider main container -->
+          <div class="swiper swiperTestimonial">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="testimonial p-4 rounded-lg">
+                  <div class="star-rating mb-2">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="comments">
+                    « Très bon service, ponctuel autant au départ pour
+                    réceptionner le véhicule, que à l’arrivée pour la
+                    restitution. Personnel agréable. Et merci pour la petite
+                    attention, la bouteille d’eau dans la voiture ! Je
+                    recommande les yeux fermés. »
+                  </p>
+                  <div class="user-info d-flex gap-3 align-items-center">
+                    <img
+                      src="./assets/images/home/person.png"
+                      alt="User Image"
+                      class="img-fluid rounded-circle mr-3"
+                    />
+                    <div>
+                      <p class="name fw-bold mb-0">Charlotte R</p>
+                      <p class="designation mb-0">Manager</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial p-4 rounded-lg">
+                  <div class="star-rating mb-2">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="comments">
+                    « Très bon service, ponctuel autant au départ pour
+                    réceptionner le véhicule, que à l’arrivée pour la
+                    restitution. Personnel agréable. Et merci pour la petite
+                    attention, la bouteille d’eau dans la voiture ! Je
+                    recommande les yeux fermés. »
+                  </p>
+                  <div class="user-info d-flex gap-3 align-items-center">
+                    <img
+                      src="./assets/images/home/person.png"
+                      alt="User Image"
+                      class="img-fluid rounded-circle mr-3"
+                    />
+                    <div>
+                      <p class="name fw-bold mb-0">Charlotte R</p>
+                      <p class="designation mb-0">Manager</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial p-4 rounded-lg">
+                  <div class="star-rating mb-2">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <p class="comments">
+                    « Très bon service, ponctuel autant au départ pour
+                    réceptionner le véhicule, que à l’arrivée pour la
+                    restitution. Personnel agréable. Et merci pour la petite
+                    attention, la bouteille d’eau dans la voiture ! Je
+                    recommande les yeux fermés. »
+                  </p>
+                  <div class="user-info d-flex gap-3 align-items-center">
+                    <img
+                      src="./assets/images/home/person.png"
+                      alt="User Image"
+                      class="img-fluid rounded-circle mr-3"
+                    />
+                    <div>
+                      <p class="name fw-bold mb-0">Charlotte R</p>
+                      <p class="designation mb-0">Manager</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ  -->
+      <section class="container-width py-5 faq-section">
+        <div class="faq-info small-faq-title">
+          <h4 class="section-title2 faq-title fw-bold pt-5">Faq</h4>
+          <h1 class="section-title fw-bold">Questions les plus fréquentes</h1>
+        </div>
+        <div
+          class="faq-container row g-4 g-sm-5 d-flex flex-wrap justify-content-between align-items-center py-5"
+        >
+          <div
+            class="accordion accordion-flush col-12 col-md-6"
+            id="accordionFlushExample"
+          >
+          <div class="faq-info large-faq-title">
+            <h4 class="section-title2 faq-title fw-bold pt-5">Faq</h4>
+            <h1 class="section-title fw-bold">Questions les plus fréquentes</h1>
+          </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                Quels horaires dois-je renseigner ?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Pour votre départ, renseignez l’heure à laquelle vous
+                  souhaitez nous confier votre véhicule. Pour votre retour,
+                  renseignez votre heure d’atterrissage. Nous avons conscience
+                  qu’il y aura un délai entre votre atterrissage et la
+                  restitution de votre véhicule. Une fois que vous êtes prêt à
+                  le récupérer, vous n’avez qu’à prévenir votre voiturier par un
+                  appel, pour qu’il vous ramène votre véhicule.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                Dois-je vous prévenir si mon vol est 
+                retardé ?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Pour votre départ, renseignez l’heure à laquelle vous
+                  souhaitez nous confier votre véhicule. Pour votre retour,
+                  renseignez votre heure d’atterrissage. Nous avons conscience
+                  qu’il y aura un délai entre votre atterrissage et la
+                  restitution de votre véhicule. Une fois que vous êtes prêt à
+                  le récupérer, vous n’avez qu’à prévenir votre voiturier par un
+                  appel, pour qu’il vous ramène votre véhicule.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                Comment contacter le service client ? 
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Pour votre départ, renseignez l’heure à laquelle vous
+                  souhaitez nous confier votre véhicule. Pour votre retour,
+                  renseignez votre heure d’atterrissage. Nous avons conscience
+                  qu’il y aura un délai entre votre atterrissage et la
+                  restitution de votre véhicule. Une fois que vous êtes prêt à
+                  le récupérer, vous n’avez qu’à prévenir votre voiturier par un
+                  appel, pour qu’il vous ramène votre véhicule.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFive"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFive"
+                >
+                Comment puis-je réserver ? 
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFive"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Pour votre départ, renseignez l’heure à laquelle vous
+                  souhaitez nous confier votre véhicule. Pour votre retour,
+                  renseignez votre heure d’atterrissage. Nous avons conscience
+                  qu’il y aura un délai entre votre atterrissage et la
+                  restitution de votre véhicule. Une fois que vous êtes prêt à
+                  le récupérer, vous n’avez qu’à prévenir votre voiturier par un
+                  appel, pour qu’il vous ramène votre véhicule.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSix"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseSix"
+                >
+                Comment contacter votre voiturier à l’allée ?  
+                </button>
+              </h2>
+              <div
+                id="flush-collapseSix"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Pour votre départ, renseignez l’heure à laquelle vous
+                  souhaitez nous confier votre véhicule. Pour votre retour,
+                  renseignez votre heure d’atterrissage. Nous avons conscience
+                  qu’il y aura un délai entre votre atterrissage et la
+                  restitution de votre véhicule. Une fois que vous êtes prêt à
+                  le récupérer, vous n’avez qu’à prévenir votre voiturier par un
+                  appel, pour qu’il vous ramène votre véhicule.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseSeven"
+                >
+                Comment récupérer votre véhicule au retour ?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseSeven"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Pour votre départ, renseignez l’heure à laquelle vous
+                  souhaitez nous confier votre véhicule. Pour votre retour,
+                  renseignez votre heure d’atterrissage. Nous avons conscience
+                  qu’il y aura un délai entre votre atterrissage et la
+                  restitution de votre véhicule. Une fois que vous êtes prêt à
+                  le récupérer, vous n’avez qu’à prévenir votre voiturier par un
+                  appel, pour qu’il vous ramène votre véhicule.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseEight"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseEight"
+                >
+                Où sera garé mon véhicule ? 
+                </button>
+              </h2>
+              <div
+                id="flush-collapseEight"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Pour votre départ, renseignez l’heure à laquelle vous
+                  souhaitez nous confier votre véhicule. Pour votre retour,
+                  renseignez votre heure d’atterrissage. Nous avons conscience
+                  qu’il y aura un délai entre votre atterrissage et la
+                  restitution de votre véhicule. Une fois que vous êtes prêt à
+                  le récupérer, vous n’avez qu’à prévenir votre voiturier par un
+                  appel, pour qu’il vous ramène votre véhicule.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseNine"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseNine"
+                >
+                Je décolle de Roissy mais j'atteris à Orly, comment faire ? 
+                </button>
+              </h2>
+              <div
+                id="flush-collapseNine"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Pour votre départ, renseignez l’heure à laquelle vous
+                  souhaitez nous confier votre véhicule. Pour votre retour,
+                  renseignez votre heure d’atterrissage. Nous avons conscience
+                  qu’il y aura un délai entre votre atterrissage et la
+                  restitution de votre véhicule. Une fois que vous êtes prêt à
+                  le récupérer, vous n’avez qu’à prévenir votre voiturier par un
+                  appel, pour qu’il vous ramène votre véhicule.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTen"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTen"
+                >
+                Puis-je modifier ma réservation ?  
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTen"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Pour votre départ, renseignez l’heure à laquelle vous
+                  souhaitez nous confier votre véhicule. Pour votre retour,
+                  renseignez votre heure d’atterrissage. Nous avons conscience
+                  qu’il y aura un délai entre votre atterrissage et la
+                  restitution de votre véhicule. Une fois que vous êtes prêt à
+                  le récupérer, vous n’avez qu’à prévenir votre voiturier par un
+                  appel, pour qu’il vous ramène votre véhicule.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <img src="./assets/images/home/faq.png" alt="" class="w-100" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer  -->
+    <footer class="footer-container">
+      <div class="container-width">
+        <div class="footer-content-container">
+          <div class="container-fluid">
+            <img src="./assets/images/home/footer-logo.png" alt="" />
+            <p class="mt-3">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown
+            </p>
+            <div class="d-flex gap-4 align-items-center">
+              <h5 class="card-title">Suivez-nous</h5>
+              <div class="d-flex gap-2 align-items-center">
+                <a href="https://www.youtube.com/" target="_blank"
+                  ><img src="./assets/images/home/brands/youtube.png" alt=""
+                /></a>
+                <a href="https://www.instagram.com/" target="_blank"
+                  ><img src="./assets/images/home/brands/instagram.png" alt=""
+                /></a>
+                <a href="https://x.com/" target="_blank"
+                  ><img src="./assets/images/home/brands/twitter.png" alt=""
+                /></a>
+                <a href="https://www.facebook.com/" target="_blank"
+                  ><img src="./assets/images/home/brands/facebook.png" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <h4 class="card-title mb-3">À PROPOS D’ÉLITE VALET</h4>
+            <p>Pourquoi nous choisir</p>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Nos services
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Notre service voiturier
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p>Notre service voiturier</p>
+            <p>Qui sommes nous ?</p>
+          </div>
+          <div class="container-fluid">
+            <h4 class="card-title mb-3">LIENS UTILES</h4>
+            <p>Services additionnels</p>
+            <p>Avis clients</p>
+            <p>Contact</p>
+            <p>FAQ</p>
+            <p>CGV</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- add js file -->
+    <script src="./js/index.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <!-- bootstrap cdn -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- swiper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      //  swiper js for how it works
+      const swiper2 = new Swiper(".swiper2", {
+        // Default parameters
+        slidesPerView: 1,
+        spaceBetween: 10,
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      //  swiper js for testimonial
+      const swiper = new Swiper(".swiperTestimonial", {
+        // Default parameters
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // Responsive breakpoints
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        },
+      });
+
+      // navbar area
+      document.addEventListener("DOMContentLoaded", function () {
+        var dropdownToggle = document.querySelector(
+          ".nav-link.dropdown-toggle1"
+        );
+        var dropdownIcon = document.querySelector(".dropdownIcon");
+
+        dropdownToggle.addEventListener("click", function () {
+          setTimeout(function () {
+            if (dropdownToggle.getAttribute("aria-expanded") === "true") {
+              dropdownIcon.classList.add("rotate-180");
+            } else {
+              dropdownIcon.classList.remove("rotate-180");
+            }
+          }, 10); // Small timeout to ensure the aria-expanded attribute is updated
+        });
+      });
+    
+      $(document).ready(function(){
+    $('#datepicker').datepicker({
+      format: 'mm/dd/yyyy',
+      autoclose: true,
+      todayHighlight: true
+    });
+    $('#datepicker2').datepicker({
+      format: 'mm/dd/yyyy',
+      autoclose: true,
+      todayHighlight: true
+    });
+  });
+    </script>
+  </body>
+</html>

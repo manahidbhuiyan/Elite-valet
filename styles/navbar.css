@@ -1,0 +1,122 @@
+/* navbar */
+.navbar-primary-btn {
+    color: #ffffff;
+    background-color: #d63000;
+    border: none;
+    padding: 10px 30px;
+    font-weight: bold;
+  }
+  
+  .navbar {
+    padding: 30px 60px;
+    box-shadow: 0px 1px 4px 0px #0000001a;
+    z-index: 33;
+    max-width: 100%;
+  }
+  .navbar-toggler{
+    background-color: #d63000;
+    padding: 8px 12px 4px;
+    border-radius: 8px;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .navbar-toggler-icon {
+    background: transparent;
+  }
+
+
+/* Mobile View Sidebar */
+.nav-overlay {
+    position: fixed;
+    background: rgba(26, 26, 26, 0.86);
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2222;
+    transition: .6s all ease-in-out;
+    display: block;
+    margin: 0;
+  }
+  
+  .mobile-sidebar{
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #ffffff; 
+    overflow-x: hidden; 
+    transition: .6s all ease-in-out; 
+  }
+  .sidebar-padding{
+    padding: 20px;
+  }
+  
+  .mobile-head{
+    display: flex;
+    justify-content: space-between;
+  }
+  .cross{
+    margin-bottom: 0;
+    line-height: 36px;
+  }
+  .cross img{
+    width: 17px;
+  }
+  .sidebar-button{
+    position: absolute;
+    bottom: 10%;
+  }
+  .nav-link.dropdown-toggle::after {
+    display: none;
+  }
+  .mobile-sidebar ul{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  .mobile-sidebar ul li{
+    padding: 5px 0;
+  }
+ .nav-overlay .dropdown-item.active, .dropdown-item:active {
+    color: black !important;
+    text-decoration: none;
+    background-color: transparent;
+}
+  
+  .dropdown-icon {
+    transition: transform 0.3s;
+    margin-left: 5px;
+    margin-top: -4px;
+  }
+  
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+  
+  
+  @media (max-width: 991px) {
+    .large-navbar, .navbar-nav{
+      display: none;
+    }
+    .mobile-sidebar .navbar-nav{
+      display: block !important;
+    }
+  } 
+  @media (max-width: 576px) {
+    .navbar {
+        padding: 10px;
+    }
+  } 
+  @media (max-width: 360px) {
+    .mobile-logo img, .navbar-brand img{
+      width: 200px;
+    }
+    .cross {
+        margin-top: -5px;
+    }
+  }
+  /* end of mobile sidebar */
